@@ -15,7 +15,7 @@ import grid from "../images/grid.png"
 import name from "../images/name.png"
 import budget from "../images/budget.png"
 import calender from "../images/calender.png"
-import axios from 'axios'
+import {axiosInstance} from '../config'
 
 
 const Home = () => {
@@ -26,7 +26,7 @@ const Home = () => {
     useEffect(() => {
         const gigsList = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/gigs')
+                const res = await axiosInstance.get('http://localhost:5000/api/gigs')
                 
             
                 setCard(res.data)
