@@ -10,6 +10,9 @@ app.use(express.json())
 
 const PORT = process.env.PORT || 5000;
 
+const host = '0.0.0.0';
+
+
 app.use(cors())
 
 const gigRoute = require('./routes/gigs')
@@ -30,7 +33,7 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(PORT, () => console.log("Server Online"));
+app.listen(PORT,host, () => console.log("Server Online"));
 
 
 
