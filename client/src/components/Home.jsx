@@ -26,7 +26,7 @@ const Home = () => {
     useEffect(() => {
         const gigsList = async () => {
             try {
-                const res = await axiosInstance.get('http://localhost:5000/api/gigs')
+                const res = await axiosInstance.get('/gigs')
                 
             
                 setCard(res.data)
